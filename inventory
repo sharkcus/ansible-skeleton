@@ -1,0 +1,10 @@
+#Example group entry
+################################
+#[server_group]
+#server1
+#server2
+#server3 
+################################
+
+[localhost]
+localhost
