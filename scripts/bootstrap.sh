@@ -15,7 +15,6 @@ VENV=".venv"
 echo "Note, this may take a few minutes to install setuptools, etc within venv."
 #echo "Please enter your proxy username"
 #read USERNAME
-PROXY="http://proxy.keybank.com:80"
 
 ####ONLY ONE CAN BE UNCOMMENTED AT A TIME. Or terrible, unthinkable things will happen.
 #Uncomment for Python 3
@@ -42,16 +41,16 @@ pkgutil_check() {
 pkgutil_upgrade() {
     for pkg in "$@"
       do
-             echo pip install --proxy=$PROXY -U "$pkg"
-             pip install --proxy=$PROXY -U "$pkg"
+             echo pip install -U "$pkg"
+             pip install -U "$pkg"
     done
 }
 
 pkgutil_install() {
     for pkg in "$@"
       do
-            echo pip install --proxy=$PROXY "$pkg"
-             pip install --proxy=$PROXY "$pkg"
+            echo pip install "$pkg"
+             pip install "$pkg"
     done
 }
 
